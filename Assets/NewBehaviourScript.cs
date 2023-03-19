@@ -82,7 +82,8 @@ public class NewBehaviourScript : MonoBehaviour
 
         int health = 30;
         int mana = 25;
-        bool isBadCondition = health <= 50 && mana <= 20;
+        //bool isBadCondition = health <= 50 && mana <= 20;
+        bool isBadCondition = health <= 50 || mana <= 20;
         Debug.Log("용사의 상태가 나쁩니까?" + isBadCondition);
 
 
