@@ -132,6 +132,35 @@ public class NewBehaviourScript : MonoBehaviour
                 break;
         }
         //6.반복문
+
+        while (health > 0)
+        {
+            health--;
+            if (health > 0)
+                Debug.Log("독 데미지를 입었습니다." + health);
+            else
+                Debug.Log("사망하였습니다.");
+
+            if (health == 10)
+            {
+                Debug.Log("해독제를 사용합니다.");
+                break;
+            }
+        }
+        for (int count = 0; count <10; count++)//연산될 변수; 조건; 연산
+        {
+            health++;
+            Debug.Log("붕대로 치료중..." + health);
+        }
+        for (int index = 0; index <monsters.Length; index++) // Length(배열) count(리스트)
+        {
+            Debug.Log("이 지역에 있는 몬스터 : " + monsters[index]);
+        }
+
+        foreach ( string monster in monsters) //foreach 는 for의 그룹형변수 탐색 특화 
+        {
+            Debug.Log("이 지역에 있는 몬스터 : " + monster);
+        }
     }
 
 
