@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class NewBehaviourScript : MonoBehaviour
 {
+    int health = 30; // 전역변수 : 함수 바깥에 선언된 변수 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -161,7 +163,15 @@ public class NewBehaviourScript : MonoBehaviour
         {
             Debug.Log("이 지역에 있는 몬스터 : " + monster);
         }
+
+
+        Heal();
+
     }
-
-
+    //7.함수[(메소드)
+    void Heal () //반환데이터가 없는 함수 타입 
+    {
+        health += 10; //함수의 지역변수는 다른 함수에 영향을 줄 수 없다.
+        Debug.Log("힐을 받았습니다." + health);
+    }
 }
