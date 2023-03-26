@@ -5,16 +5,20 @@ using UnityEngine;
 public class NewBehaviourScript : MonoBehaviour
 {
     int health = 30; // 전역변수 : 함수 바깥에 선언된 변수 
+    int level = 5;
+    float strength = 15.5f;
+    string playerName = "애플";
+    bool isFullLevel = false;
 
     // Start is called before the first frame update
     void Start()
     {
         Debug.Log("Hello Unity");
         //1.변수
-        int level = 5;
-        float strength = 15.5f;
-        string playerName = "애플";
-        bool isFullLevel = false;
+        //int level = 5;
+        //float strength = 15.5f;
+        //string playerName = "애플";
+        //bool isFullLevel = false;
 
         // 선언 -> 초기화  -> 호출(사용) 
         //Debug.Log("용사의 이름은?");
@@ -167,11 +171,28 @@ public class NewBehaviourScript : MonoBehaviour
 
         Heal();
 
+        for (int index = 0; index < monsters.Length; index++)
+        {
+            Debug.Log("용사는" + monsters[index] + "에게" + Battle(monsterLevel[index]));
+        }
+
     }
     //7.함수[(메소드)
     void Heal () //반환데이터가 없는 함수 타입 
     {
         health += 10; //함수의 지역변수는 다른 함수에 영향을 줄 수 없다.
         Debug.Log("힐을 받았습니다." + health);
+    }
+
+    string Battle(int monsterLevel)
+    {
+        string result;
+        if (level >= monsterLevel)
+            result = "이겼습니다.";
+        else
+            result = "졌습니다.";
+
+        return result;
+
     }
 }
