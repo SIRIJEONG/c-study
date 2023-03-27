@@ -173,8 +173,23 @@ public class NewBehaviourScript : MonoBehaviour
 
         for (int index = 0; index < monsters.Length; index++)
         {
-            Debug.Log("용사는" + monsters[index] + "에게" + Battle(monsterLevel[index]));
+            //Debug.Log("용사는" + monsters[index] + "에게" + Battle(monsterLevel[index]));
         }
+
+        //8.클래스 
+        Player player = new Player(); //인스턴스화 //apple 클래스는 부모클래스가 되는것이고 Player클래스는 자식 클래스가 되는것이다. 
+        player.id = 0;
+        player.name = "gaia";
+        player.title = "여신";
+        player.strength = 2.4f;
+        player.weapon = "banana";
+        Debug.Log(player.Talk());
+        Debug.Log(player.hasWeapon());
+
+        player.LevelUp();
+        Debug.Log(player.name + "의 레벨은" + player.level + "입니다.");
+
+        Debug.Log(player.move());       
 
     }
     //7.함수[(메소드)
