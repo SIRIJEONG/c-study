@@ -208,6 +208,6 @@ public class NewBehaviourScript : MonoBehaviour
             result = "졌습니다.";
 
         return result;
-        //테스트 22
+        //테스트 2233
     }
 }
