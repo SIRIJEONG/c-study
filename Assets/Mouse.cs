@@ -32,6 +32,17 @@ public class Mouse : MonoBehaviour
         //    Debug.Log("슈퍼 미사일 발사 !!");
 
 
+        //if (Input.GetButtonDown("SuperFire")) //점프를 할때는 보통 다운을 안쓴다.
+        //    Debug.Log("필살기!");
+        //if (Input.GetButton("Jump"))
+        //    Debug.Log("점프 모으는 중...");
+        //if (Input.GetButtonUp("Jump"))
+        //    Debug.Log("슈퍼 점프");
 
+        if (Input.GetButton("Horizontal"))
+            Debug.Log("횡 이동중 ..." + Input.GetAxisRaw("Horizontal")); //중간값을 나타내려면 Raw를 뺀다
+
+        if (Input.GetButton("Vertical"))
+            Debug.Log("종 이동중 ..." + Input.GetAxisRaw("Vertical")); 
     }
 }
