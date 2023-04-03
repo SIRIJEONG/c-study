@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using UnityEngine;
 
 public class Mouse : MonoBehaviour
@@ -7,8 +8,8 @@ public class Mouse : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.anyKeyDown)
-            Debug.Log("플레이어가 아무키를 눌렀습니다.");
+        //if (Input.anyKeyDown)
+        //    Debug.Log("플레이어가 아무키를 눌렀습니다.");
         //if (Input.anyKey)
         //    Debug.Log("플레이어가 아무키를 누르고있습니다.");
 
@@ -39,10 +40,10 @@ public class Mouse : MonoBehaviour
         //if (Input.GetButtonUp("Jump"))
         //    Debug.Log("슈퍼 점프");
 
-        if (Input.GetButton("Horizontal"))
-            Debug.Log("횡 이동중 ..." + Input.GetAxisRaw("Horizontal")); //중간값을 나타내려면 Raw를 뺀다
+        //if (Input.GetButton("Horizontal"))
+        //    Debug.Log("횡 이동중 ..." + Input.GetAxisRaw("Horizontal")); //중간값을 나타내려면 Raw를 뺀다
 
-        if (Input.GetButton("Vertical"))
-            Debug.Log("종 이동중 ..." + Input.GetAxisRaw("Vertical")); 
+        //if (Input.GetButton("Vertical"))
+        //    Debug.Log("종 이동중 ..." + Input.GetAxisRaw("Vertical"));  
     }
 }
