@@ -28,9 +28,17 @@ public class MoveTarget : MonoBehaviour
         //                                , target, 0.05f); 
 
 
-        //4.SLerp(구면 선형 분감)
-        transform.position =
-            Vector3.Slerp(transform.position
-                                        , target, 0.1f); //포물선 이동 
+        ////4.SLerp(구면 선형 분감)
+        //transform.position =
+        //    Vector3.Slerp(transform.position
+        //                                , target, 0.1f); //포물선 이동 
+
+
+        ////5.Time.deltaRime (이전 프레임의 완료까지 걸린시간)
+        //Vector3 vec = new Vector3(
+        //    Input.GetAxisRaw("Horizontal") * Time.deltaTime
+        //    Input.GetAxisRaw("Vertical") * Time.deltaTime);
+        //transform.Translate(vec);
+
     }
 }
