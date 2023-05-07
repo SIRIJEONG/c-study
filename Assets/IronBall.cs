@@ -19,16 +19,21 @@ public class IronBall : MonoBehaviour
 
 
         //#2. 힘을 가하기
-        if (Input.GetButtonDown("Jump")) {
-            rigid.AddForce(Vector3.up * 25, ForceMode.Impulse);
+        //if (Input.GetButtonDown("Jump")) {
+        //    rigid.AddForce(Vector3.up * 25, ForceMode.Impulse);
 
-        }
-        Vector3 vec = new Vector3(Input.GetAxisRaw("Horizontal"),
-            0, Input.GetAxisRaw("Vertical"));
+        //}
+        //Vector3 vec = new Vector3(Input.GetAxisRaw("Horizontal"),
+        //    0, Input.GetAxisRaw("Vertical"));
+
+        float h = Input.GetAxisRaw("Horizontal");
+        float v = Input.GetAxisRaw("Vertical");
+        Vector3 vec = new Vector3(h, 0, v);
 
         rigid.AddForce(vec, ForceMode.Impulse);
 
         ////#3. 회전력
         //rigid.AddTorque(Vector3.up); //AddTorque(Vec):Vec방향을 축으로 회전력이 생김
     }
+
 }
