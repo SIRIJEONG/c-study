@@ -35,5 +35,22 @@ public class IronBall : MonoBehaviour
         ////#3. 회전력
         //rigid.AddTorque(Vector3.up); //AddTorque(Vec):Vec방향을 축으로 회전력이 생김
     }
+    private void OnTriggerStay(Collider other) // 콜라이더가 계속 충돌하고 있을 때 호출
+    {
+        if (other.name == "Cube 3")
+            rigid.AddForce(Vector3.up * 2, ForceMode.Impulse);
+
+    }
+
+    ////실제 물리적인 충돌로 발생하는 이벤트 
+    //private void OnCollisionEnter(Collision collision) { }
+    //private void OnCollisionStay(Collision collision) { }
+    //private void OnCollisionExit(Collision collision) { }
+
+    ////콜라이더 충돌로 발생하는 이벤트
+    //private void OnTriggerEnter(Collider other) { }
+    //private void OnTriggerStay(Collider other) { }
+    //private void OnTriggerExit(Collider other) { }
+
 
 }
